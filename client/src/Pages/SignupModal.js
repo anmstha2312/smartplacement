@@ -20,7 +20,7 @@ const SignupModal = (props) => {
 
       const addUsers=()=>{
         
-          Axios.post("http://localhost:5000/register",{
+          Axios.post("http://localhost:8080/register",{
               firstName:firstName,
               lastName:lastName,
               username:username, 
