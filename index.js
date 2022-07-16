@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const mysql = require('mysql');
 const cors = require('cors');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)+"/client/build"));
