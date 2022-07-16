@@ -51,7 +51,7 @@ const ForgotPassword = () => {
 
 const loginUser=(event)=>{
   event.preventDefault();
-  Axios.post("http://localhost:5000/finduser",{
+  Axios.post("http://localhost:8080/finduser",{
     username:username
   }).then((response)=>{
     if(response.data.message){
