@@ -65,7 +65,7 @@ const loginUser=(event)=>{
 
 const changePassword=(event)=>{
   event.preventDefault();
-  Axios.post("http://localhost:5000/changePassword",{
+  Axios.post("http://localhost:8080/changePassword",{
     username:username,
     password:password
   }).then((response)=>{
