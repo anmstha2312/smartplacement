@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 import Axios from 'axios';
+import {PORT} from "../../../index";
 
 const ForgotPassword = () => {
     const formStyle = {
@@ -51,6 +52,7 @@ const ForgotPassword = () => {
 
 const loginUser=(event)=>{
   event.preventDefault();
+  console.log(PORT);
   Axios.post("http://localhost:8080/finduser",{
     username:username
   }).then((response)=>{
