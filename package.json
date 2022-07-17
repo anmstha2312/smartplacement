@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": { 
-  "start": "node index.js", 
-  "test": "echo something" },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo something"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
