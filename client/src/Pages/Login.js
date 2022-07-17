@@ -5,7 +5,6 @@ import "../Style/styles.css";
 import { Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios";
-import {PORT} from "../../../index";
 
 // import linq from "linq";
 // import Enumerable from "linq";
@@ -42,7 +41,7 @@ const Login = () =>  {
 
   const loginUser=(event)=>{
     event.preventDefault();
-    Axios.post("http://localhost:8080/login",{
+    Axios.post("/login",{
       username:username, 
       password:password
     }).then((response)=>{
@@ -50,7 +49,6 @@ const Login = () =>  {
         setIsSubmitted(false);
         localStorage.setItem("isSubmitted", false);
         setErrorMessages({ name: "pass", message: errors.pass });
-        console.log(PORT);
       } else{
         setIsSubmitted(true);
         localStorage.setItem("isSubmitted", true);
